@@ -1,0 +1,480 @@
+/* ==========================================================================
+   ReliRoute 旅行時間可靠度分析平台 - 共用樣式
+   ========================================================================== */
+
+:root {
+  --primary: #2563EB;
+  --primary-dark: #1E40AF;
+  --primary-light: #DBEAFE;
+
+  --sidebar: #0F172A;
+  --background: #EEF4FA;
+  --card-bg: #FFFFFF;
+
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #38BDF8;
+
+  --sidebar-width: 260px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans TC", Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--sidebar);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 20px;
+  z-index: 1000;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.sidebar-brand i {
+  font-size: 1.6rem;
+  color: var(--info);
+}
+
+.sidebar-brand span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sidebar-subtitle {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #CBD5E1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-nav .nav-link i {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.sidebar-nav .nav-link.active {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+/* ==========================================================================
+   Main content
+   ========================================================================== */
+
+.main-content {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  padding: 32px 40px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.card-surface {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  border: none;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  border-radius: 14px;
+  font-weight: 600;
+  padding: 10px 22px;
+}
+
+.btn-sm {
+  border-radius: 12px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ==========================================================================
+   Hero (index.html)
+   ========================================================================== */
+
+.hero-card {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  border-radius: 20px;
+  padding: 56px 48px;
+  color: #fff;
+}
+
+.hero-tag {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.hero-card h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  max-width: 720px;
+  margin-bottom: 16px;
+}
+
+.hero-card p {
+  color: var(--primary-light);
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+.hero-card .btn-light {
+  border-radius: 14px;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.hero-card .btn-outline-light {
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+/* Feature cards */
+
+.feature-card {
+  padding: 28px 24px;
+  height: 100%;
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+
+.feature-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Analysis / Travel layout (3 columns)
+   ========================================================================== */
+
+.workspace-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  /* 右側再多留一點白,避免右側資訊卡貼齊瀏覽器邊緣(只影響 analysis / travel 這兩頁) */
+  padding-right: 32px;
+}
+
+.panel-filter {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.panel-map {
+  flex: 0 0 55%;
+  max-width: 55%;
+}
+
+.panel-info {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.panel-card {
+  padding: 24px;
+  height: 100%;
+}
+
+.panel-card h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.form-select, .form-control {
+  border-radius: 12px;
+  border-color: #E2E8F0;
+}
+
+.map-container {
+  width: 100%;
+  height: 640px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Route info panel */
+
+.info-placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 40px 8px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #F1F5F9;
+  font-size: 0.9rem;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row .label {
+  color: var(--text-muted);
+}
+
+.info-row .value {
+  font-weight: 700;
+}
+
+.info-route-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.info-id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  word-break: break-all;
+}
+
+/* Risk badges */
+
+.badge-risk {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.badge-risk.low {
+  background-color: rgba(34, 197, 94, 0.12);
+  color: var(--success);
+}
+
+.badge-risk.medium {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: var(--warning);
+}
+
+.badge-risk.high {
+  background-color: rgba(239, 68, 68, 0.12);
+  color: var(--danger);
+}
+
+/* Total travel time panel */
+
+.total-time-value {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.total-time-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* Reliability 圖例(analysis 地圖右下角) */
+
+.reliability-legend {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.reliability-legend-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.reliability-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reliability-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Leaflet popup tweaks */
+
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+}
+
+.popup-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.popup-row {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.popup-row strong {
+  color: var(--text-main);
+}
+
+/* About page */
+
+.about-list dt {
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 18px;
+}
+
+.about-list dd {
+  color: var(--text-muted);
+  margin-bottom: 0;
+}

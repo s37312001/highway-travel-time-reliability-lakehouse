@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+
+# Raw and processed datasets
+data/raw/
+data/processed/
+data/tmp/
+data/downloads/
+
+# Large data formats
+*.parquet
+*.orc
+*.avro
+
+# Spark and Hadoop runtime files
+spark-warehouse/
+metastore_db/
+derby.log
+warehouse/
+checkpoints/
+.eventlog/
+spark-events/
+
+# Full outputs
+outputs/*
+!outputs/sample/
+!outputs/sample/**
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.part
+_SUCCESS
+
+# Compressed datasets
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Original report containing internal paths and IP addresses
+資料分析.pdf
+project-notes-original.pdf
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store

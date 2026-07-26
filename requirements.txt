@@ -1,0 +1,8 @@
+# Python 3.10 or newer
+
+pandas>=2.0,<3.0
+pyarrow>=12.0
+pyspark==3.4.4
+
+# Apache Iceberg is loaded by spark-submit, not pip:
+# org.apache.iceberg:iceberg-spark-runtime-3.4_2.12:1.9.0

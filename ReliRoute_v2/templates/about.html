@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>關於平台 - ReliRoute</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <a href="{{ url_for('index') }}" class="sidebar-brand">
+      <i class="bi bi-signpost-split"></i>
+      <span>ReliRoute</span>
+    </a>
+    <div class="sidebar-subtitle">旅行時間可靠度分析平台</div>
+
+    <nav class="sidebar-nav">
+      <a class="nav-link" href="{{ url_for('analysis') }}">
+        <i class="bi bi-bar-chart-line"></i> 穩定度分析
+      </a>
+      <a class="nav-link" href="{{ url_for('travel') }}">
+        <i class="bi bi-clock-history"></i> 旅行時間查詢
+      </a>
+      <a class="nav-link active" href="{{ url_for('about') }}">
+        <i class="bi bi-info-circle"></i> 關於平台
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">&copy; 2026 ReliRoute</div>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1>關於平台</h1>
+      <p>ReliRoute 平台簡介、資料來源與技術架構</p>
+    </div>
+
+    <div class="card-surface p-4" style="max-width: 720px;">
+      <dl class="about-list mb-0">
+        <dt>平台名稱</dt>
+        <dd>ReliRoute 旅行時間可靠度分析平台</dd>
+
+        <dt>資料來源</dt>
+        <dd>TDCS 歷史交通資料</dd>
+
+        <dt>分析方法</dt>
+        <dd>中位數、P95、緩衝時間、穩定度等級</dd>
+
+        <dt>前端技術</dt>
+        <dd>HTML5、Bootstrap 5、JavaScript、Leaflet</dd>
+
+        <dt>後端技術</dt>
+        <dd>Flask API、JSON、GeoJSON</dd>
+
+        <dt>部署架構</dt>
+        <dd>Docker、Kubernetes</dd>
+      </dl>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
